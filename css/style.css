@@ -1,48 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-body {
-  background: #192226 !important;
+:root {
+  --font-family: 'Lato', sans-serif;
+  --background-color: #ffffff;
 }
 
-.navbar-inverse {
-  background: #222b31 !important;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--background-color);
+}
+
+
+/* .navbar-inverse {
+  background: #000000 !important;
   border-bottom: 4px solid #ee445f !important;
 }
 
 .navbar-brand {
-  font: 12px Lato !important;
+  font-family: Lato;
+  font-size: 12px;
   margin-right: 200px;
   text-transform: uppercase;
-  color: #fff !important;
+  color: var(--background-color);
   letter-spacing: 2px;
+  font-weight:600;
   margin-top: 2px;
 }
 
-.navbar-collapse ul{
-    margin-left: 100px;
-}
 
 .nav {
   margin-bottom: 0px;
 }
 
+
+
 a {
-  font: 500 11px Lato;
+  font-family: var(--font-family)
+  font-size: 11px;
   letter-spacing: 2px;
-  padding: 16px !important;
-  color: #a3bfc6 !important;
+  padding: 16px;
+  color: #a3bfc6;
   text-transform: uppercase;
   position: relative;
   z-index: 1000;
 }
 
 a:hover {
-  color: #fff !important;
+  color: rgb(255, 255, 255);
 }
 
-ul{
-    margin-left: 180px;
-}
+
 
 li {
   position: relative;
@@ -53,45 +66,44 @@ li {
 }
 
 .navbar-collapse {
-  box-shadow: none !important;
-  border: none !important;
+  box-shadow: none;
+  border: none;
 }
 
 .navbar-inverse .navbar-toggle:hover {
-  background: transparent !important;
+  background: transparent;
 }
 
 .navbar-inverse .navbar-toggle:focus {
-  background: transparent !important;
+  background: transparent;
 }
 
 .navbar-inverse .navbar-toggle:active {
-  background: transparent !important;
+  background: transparent;
 }
 
 .icon-bar {
-  background: #a3bfc6 !important;
+  background: #a3bfc6;
 }
-
 
 .hover {
   display: block;
   position: absolute;
+  background: #ee445f;
   width: 0%;
   height: 100%;
   top: 0px;
   left: 0px;
-  background: #ee445f !important;
   z-index: 0;
   opacity: 0;
-}
+} */
 
 @media (max-width: 767px) {
   .nav {
     padding-bottom: 20px;
   }
   a {
-    padding: 12px !important;
+    padding: 12px;
   }
 }
 
