@@ -44,7 +44,11 @@
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.cs">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- link stylesheet  -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -53,8 +57,9 @@
 
 <body>
 
+
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-inverse sticky-top navbar-dark">
         <div class="container">
 
             <a class="navbar-brand" href="#">My Buissness</a>
@@ -67,7 +72,7 @@
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-location-dot"></i>
+                        <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-location-dot"></i>
                             Area</a>
                     </li>
 
@@ -118,137 +123,114 @@
         <div class="alert alert-primary text-center" role="alert">Daily Entry</div>
     </div>
 
-    <div class="container">
-
+    <div class="container form-body">
         <form>
-
             <div class="row">
 
-                <label class="text-center bg-info bg-opacity-50" for="firstname"><i class="fa-regular fa-face-smile"></i> Customer</label>
-                <hr>
-                <div class="form-group has-float-label col-lg-6 name" id="firstname">
-                    <input type="text" class="form-control has-float-label" id="firstname" placeholder="" required>
-                    <label for="fullname">Firstname</label>
+
+                <div class="form-group has-float-label col-lg-12 name" id="firstname">
+                    <input type="text" class="form-control has-float-label" id="firstname" placeholder="Enter your name"
+                        required>
+                    <label for="fullname"><i class="fa-solid fa-address-card"></i> Name</label>
                 </div>
 
 
-                <div class="form-group has-float-label col-lg-6 name" id="lastname">
-                    <input type="text" class="form-control has-float-label" id="lastname" placeholder="" required>
-                    <label for="fullname">Lastname</label>
-                </div>
             </div>
 
-<br>
 
             <div class="row">
 
-                <label class="text-center bg-info bg-opacity-50" for="item"><i class="fa-regular fa-circle-check"></i> Items</label>
-                <hr>
-
                 <div class="col-lg-12">
-                   
-                    <select class="form-select custom-select form-control" aria-label="Default select example">
-                        <option selected>Select item</option>
-                        <option value="1"></option>
-                        <option value="2"></option>
-                        <option value="3"></option>
+
+                    <label for="select-item"><i class="fa-solid fa-cart-arrow-down"></i> Items</label>
+                    <select class="form-control select2" id="select-item">
+                        <option>select item</option>
+                        <option>...</option>
                     </select>
                 </div>
             </div>
 
 
-            <br>
+<br>
 
 
 
             <div class="row">
-
-                <label class="text-center bg-info bg-opacity-50" for="item"><i class="fa-solid fa-cart-shopping"></i> Rate</label>
-
-                <hr>
-
                 <div class="form-group has-float-label col-lg-12">
-                    <input type="number" class="form-control" id="rate" placeholder="" required>
-                    <label for="number">Enter Rate</label>
+                    <input type="number" class="form-control" id="rate" placeholder="Todays Rate" required>
+                    <label for="number"><i class="fa-solid fa-money-bill-trend-up"></i>Rate</label>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="form-group col-lg-6 has-float-label qty" id="quantity">
+
+                    <input type="number" class="form-control" id="qty" placeholder="Enter quantity" required>
+                    <label for="number"><i class="fa-solid fa-notes-medical"></i> Qty</label>
+                </div>
+
+
+
+                <div class="form-group col-lg-6 has-float-label qty" id="discount">
+
+                    <input type="number" class="form-control" id="discount" placeholder="discount" required>
+                    <label for="number"><i class="fa-solid fa-percent"></i> Discount</label>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+
+                <div class="col-lg-12">
+
+                    <button type="button" class="btn btn-primary col-lg-12 align-content-center" id="btn"> Add items
+                    </button>
                 </div>
             </div>
 
             <br>
 
-
             <div class="row">
-
-                <label class="text-center bg-info bg-opacity-50" for="qty"><i class="fa-solid fa-star"></i> Quantity</label>
-                <hr>
-
-                <div class="form-group col-lg-4 has-float-label row qty" id="quantity">
-
-                    <input type="number" class="form-control" id="qty" placeholder="" required>
-                    <label for="number">Enter quantity</label>
-                </div>
-
-
-                <div class="col-lg-4 qty" id="discount">
-                    <input type="number" class="form-control" id="dis" placeholder="Enter Discount" required>
-                    <label for="number"></label>
-                </div>
-
-                <div class="col-lg-4 qty">
-
-                    <button type="button" class="btn btn-outline-primary" id="btn">Add items</button>
-                </div>
-            </div>
-
-     
-
-            <div class="row">
-
-                <label class="text-center bg-info bg-opacity-50" for="discription"><i class="fa-solid fa-message"></i> Discription</label>
-                <hr>
-
 
                 <div class="form-group has-float-label col-lg-12">
                     <textarea name="textara" class="form-control" id="discription" placeholder="item Discription"
                         required></textarea>
-                    <label for="discription">Discription</label>
+                    <label for="discription"><i class="fa-solid fa-pen-to-square"></i> Discription</label>
                 </div>
-            </div>
-            <br>
 
+            </div>
 
             <div class="row">
-
-                <label class="text-center bg-info bg-opacity-50" for="file"><i class="fa-solid fa-upload"></i> Upload image</label>
-                <hr>
-
 
                 <div class="form-group has-float-label col-lg-12">
                     <input type="file" class="form-control" id="file">
-                    <label for="file">items</label>
+                    <label for="file"><i class="fa-solid fa-upload"></i> file</label>
                 </div>
             </div>
-            <br>
+
 
 
             <div class="row">
 
-                <label class="text-center bg-info bg-opacity-50" for="amount"><i class="fa-solid fa-indian-rupee-sign"></i> Amount</label>
-                <hr>
-
 
 
                 <div class="form-group has-float-label col-lg-12">
-                    <input type="number" class="form-control" id="amount" placeholder="" required>
-                    <label for="file">Enter Your Amount</label>
+                    <input type="number" class="form-control" id="amount" placeholder="Enter your amount" required>
+                    <label for="file"><i class="fa-solid fa-indian-rupee-sign"></i>Amount</label>
                 </div>
 
-                <div class="row fixed-bottom">
+                <div class="row">
 
 
-                    <button type="reset" class="btn btn-primary col-lg-4 col-sm-12 fixBtn" id="btnReset">reset</button>
+                    <button type="reset" class="btn btn-primary col-lg-6" id="btnReset">reset</button>
 
 
-                    <button type="submit" class="btn btn-primary col-lg-4 col-sm-12 fixBtn" id="btnSubmit">Submit</button>
+                    <button type="submit" class="btn btn-primary col-lg-6" id="btnSubmit">Submit</button>
 
                 </div>
         </form>
