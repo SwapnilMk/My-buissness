@@ -41,6 +41,9 @@
     <!-- importing bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.cs">
 
     <!-- link stylesheet  -->
     <link rel="stylesheet" href="css/style.css">
@@ -51,13 +54,16 @@
 <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark">
         <div class="container">
+
             <a class="navbar-brand" href="#">My Buissness</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
                 aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -84,18 +90,21 @@
                         <a class="nav-link" href="#"><i class="fa-solid fa-file-invoice-dollar"></i> Bills</a>
                     </li>
 
+                    <!-- dropdown nav item -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-fill me-2"></i><i class="fa-solid fa-user-gear"></i> Account
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-check"></i> Welcome user</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-check"></i> Welcome
+                                    user</a></li>
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -105,9 +114,147 @@
     </nav>
 
 
+    <div class="container-fluid">
+        <div class="alert alert-primary text-center" role="alert">Daily Entry</div>
+    </div>
+
+    <div class="container">
+
+        <form>
+
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="firstname"><i class="fa-regular fa-face-smile"></i> Customer</label>
+                <hr>
+                <div class="form-group has-float-label col-lg-6 name" id="firstname">
+                    <input type="text" class="form-control has-float-label" id="firstname" placeholder="" required>
+                    <label for="fullname">Firstname</label>
+                </div>
+
+
+                <div class="form-group has-float-label col-lg-6 name" id="lastname">
+                    <input type="text" class="form-control has-float-label" id="lastname" placeholder="" required>
+                    <label for="fullname">Lastname</label>
+                </div>
+            </div>
+
+<br>
+
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="item"><i class="fa-regular fa-circle-check"></i> Items</label>
+                <hr>
+
+                <div class="col-lg-12">
+                   
+                    <select class="form-select custom-select form-control" aria-label="Default select example">
+                        <option selected>Select item</option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                    </select>
+                </div>
+            </div>
+
+
+            <br>
 
 
 
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="item"><i class="fa-solid fa-cart-shopping"></i> Rate</label>
+
+                <hr>
+
+                <div class="form-group has-float-label col-lg-12">
+                    <input type="number" class="form-control" id="rate" placeholder="" required>
+                    <label for="number">Enter Rate</label>
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="qty"><i class="fa-solid fa-star"></i> Quantity</label>
+                <hr>
+
+                <div class="form-group col-lg-4 has-float-label row qty" id="quantity">
+
+                    <input type="number" class="form-control" id="qty" placeholder="" required>
+                    <label for="number">Enter quantity</label>
+                </div>
+
+
+                <div class="col-lg-4 qty" id="discount">
+                    <input type="number" class="form-control" id="dis" placeholder="Enter Discount" required>
+                    <label for="number"></label>
+                </div>
+
+                <div class="col-lg-4 qty">
+
+                    <button type="button" class="btn btn-outline-primary" id="btn">Add items</button>
+                </div>
+            </div>
+
+     
+
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="discription"><i class="fa-solid fa-message"></i> Discription</label>
+                <hr>
+
+
+                <div class="form-group has-float-label col-lg-12">
+                    <textarea name="textara" class="form-control" id="discription" placeholder="item Discription"
+                        required></textarea>
+                    <label for="discription">Discription</label>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="file"><i class="fa-solid fa-upload"></i> Upload image</label>
+                <hr>
+
+
+                <div class="form-group has-float-label col-lg-12">
+                    <input type="file" class="form-control" id="file">
+                    <label for="file">items</label>
+                </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+
+                <label class="text-center bg-info bg-opacity-50" for="amount"><i class="fa-solid fa-indian-rupee-sign"></i> Amount</label>
+                <hr>
+
+
+
+                <div class="form-group has-float-label col-lg-12">
+                    <input type="number" class="form-control" id="amount" placeholder="" required>
+                    <label for="file">Enter Your Amount</label>
+                </div>
+
+                <div class="row fixed-bottom">
+
+
+                    <button type="reset" class="btn btn-primary col-lg-4 col-sm-12 fixBtn" id="btnReset">reset</button>
+
+
+                    <button type="submit" class="btn btn-primary col-lg-4 col-sm-12 fixBtn" id="btnSubmit">Submit</button>
+
+                </div>
+        </form>
+    </div>
+
+    </div>
 
 
 
